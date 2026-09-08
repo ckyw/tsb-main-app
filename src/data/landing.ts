@@ -15,7 +15,6 @@ export type AppFeature = {
 };
 
 export const heroContent = {
-  eyebrow: "TAPSHOPBAR APP",
   title: "wine is\nsecond americano",
   description: "와인을 더 쉽게, 취향은 더 확실하게.\n탭샵바에서 시작해 보세요.",
   ctaLabel: "앱 설치하기",
@@ -77,7 +76,8 @@ export const appFeaturesContent = {
       title: "눈치 보지 않고\n테이블 QR로 주문",
       description: [
         "매장 테이블의 QR코드를 스캔하면 바로 주문 화면으로 연결됩니다.",
-        "앱에서 메뉴를 고르고 실시간 재고를 확인해 픽업 또는 배달로 주문할 수 있어요.",
+        "줄을 서거나 직원을 기다리지 않고 앱에서 바로 메뉴를 고르고 주문할 수 있어요.",
+        "실시간으로 재고를 확인해서 픽업하거나 집에서도 간편하게 배달 주문도 가능해요.",
       ],
       image: "/images/app/order-screen.webp",
       imageAlt: "탭샵바 앱 주문 방식 선택 화면",
@@ -86,7 +86,8 @@ export const appFeaturesContent = {
       title: "마신 와인과 탭 횟수가,\n나만의 취향으로",
       description: [
         "매장에서 마신 와인 종류와 탭 횟수가 마이셀러에 자동으로 기록됩니다.",
-        "쌓인 히스토리를 바탕으로 오늘의 취향에 맞는 와인을 더 쉽게 고를 수 있습니다.",
+        "히스토리가 쌓일수록 내가 좋아하는 스타일이 더 선명해져요.",
+        "다음 방문에는 이 기록을 바탕으로 오늘의 취향에 맞는 와인을 더 쉽게 고를 수 있습니다.",
       ],
       image: "/images/app/myseller-screen.webp",
       imageAlt: "탭샵바 앱 마이셀러 취향 기록 화면",

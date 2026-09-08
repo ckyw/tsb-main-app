@@ -6,7 +6,6 @@ export function MembershipSection() {
     <section className="light-section membership-section" id="membership">
       <div className="site-shell membership-layout">
         <div className="membership-copy">
-          <p className="eyebrow eyebrow--dark">TAPSHOPBAR MEMBERSHIP</p>
           <h2 className="section-heading">{membershipContent.title}</h2>
           <p className="membership-description">{membershipContent.description}</p>
           <dl className="benefit-list">

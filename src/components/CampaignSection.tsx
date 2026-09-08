@@ -6,11 +6,9 @@ export function CampaignSection() {
     <section className="campaign-section" id="campaign">
       <div className="site-shell campaign-layout">
         <div className="campaign-copy">
-          <p className="eyebrow eyebrow--dark">LAUNCH CAMPAIGN</p>
           <h2>{campaignConfig.eyebrow}</h2>
           <p className="campaign-benefit"><strong>{campaignConfig.period}</strong>, {campaignConfig.benefit}</p>
           <p>{campaignConfig.message}</p>
-          <small>{campaignConfig.notice}</small>
         </div>
         <Image
           src="/images/campaign/launch-event.webp"
