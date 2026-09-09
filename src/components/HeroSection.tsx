@@ -7,10 +7,10 @@ export function HeroSection() {
     <section className="hero-section dark-section" id="top">
       <div className="site-shell hero-inner">
         <Image
-          src="/images/brand/app-icon.png"
+          src="/images/brand/app-icon-final.png"
           alt="탭샵바 앱 아이콘"
-          width={260}
-          height={264}
+          width={245}
+          height={245}
           className="hero-app-icon"
           priority
         />

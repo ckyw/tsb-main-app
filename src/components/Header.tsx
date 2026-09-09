@@ -8,7 +8,6 @@ export function Header() {
           <BrandMark />
         </a>
         <div className="header-actions" aria-hidden="true">
-          <span className="search-symbol" />
           <span className="menu-symbol"><i /><i /><i /></span>
         </div>
       </div>

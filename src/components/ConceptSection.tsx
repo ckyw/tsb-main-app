@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { conceptContent } from "@/data/landing";
+import { LottieIllustration } from "@/components/LottieIllustration";
 
 export function ConceptSection() {
   return (
@@ -10,13 +10,7 @@ export function ConceptSection() {
           {conceptContent.items.map((item) => (
             <article className="concept-card" key={item.key}>
               <div className="sketch-frame">
-                <Image
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width={520}
-                  height={510}
-                  sizes="(max-width: 767px) 84vw, (max-width: 1199px) 42vw, 360px"
-                />
+                <LottieIllustration name={item.key} label={item.animationLabel} />
               </div>
               <div className="concept-copy">
                 <h3>{item.title}</h3>

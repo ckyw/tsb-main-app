@@ -14,10 +14,12 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { overflow-x: clip; scroll-behavior: smooth; }
 
 body {
+  width: 100%;
   margin: 0;
+  overflow-x: clip;
   background: var(--black);
   color: var(--ink);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
@@ -41,8 +43,6 @@ img { display: block; }
 .brand-mark--compact img { height: 210px !important; }
 .logo-link { display: inline-flex; }
 .header-actions { display: flex; align-items: center; gap: 76px; color: #4d4d4d; }
-.search-symbol { position: relative; width: 51px; height: 51px; border: 6px solid currentColor; border-radius: 50%; }
-.search-symbol::after { content: ""; position: absolute; width: 30px; height: 6px; right: -22px; bottom: -12px; border-radius: 4px; background: currentColor; transform: rotate(45deg); }
 .menu-symbol { width: 65px; display: grid; gap: 14px; }
 .menu-symbol i { display: block; height: 6px; border-radius: 3px; background: currentColor; }
 
@@ -51,7 +51,7 @@ img { display: block; }
 
 .hero-section { min-height: 1590px; display: grid; place-items: center; }
 .hero-inner { padding-block: 200px 112px; text-align: center; }
-.hero-app-icon { width: 228px; height: auto; margin: 0 auto 122px; }
+.hero-app-icon { width: 245px; height: auto; margin: 0 auto 122px; }
 .hero-inner h1 { margin: 0 auto; white-space: pre-line; font-size: 122px; font-weight: 800; letter-spacing: -.055em; line-height: 1.08; }
 .hero-description { margin: 92px auto 128px; white-space: pre-line; color: #ededed; font-size: 54px; font-weight: 500; line-height: 1.48; }
 .download-link { display: inline-flex; min-height: 170px; align-items: center; justify-content: center; padding-inline: 56px; border-radius: 34px; background: var(--yellow); color: var(--black); font-size: 56px; font-weight: 800; transition: transform .2s ease, background .2s ease; }
@@ -65,7 +65,8 @@ img { display: block; }
 .concept-grid { display: grid; gap: 180px; }
 .concept-card { min-width: 0; }
 .sketch-frame { overflow: hidden; display: grid; aspect-ratio: 1.03 / 1; place-items: center; border: 6px solid var(--line); border-radius: 44px; background: #fff; }
-.sketch-frame img { width: 72%; height: 72%; object-fit: contain; }
+.lottie-illustration { width: 72%; height: 72%; }
+.lottie-illustration > div, .lottie-illustration svg { width: 100% !important; height: 100% !important; }
 .concept-copy { padding-top: 74px; }
 .concept-copy h3 { margin: 0 0 72px; font-size: 146px; font-weight: 800; letter-spacing: -.045em; line-height: .95; }
 .concept-tagline { margin: 0 0 72px; color: var(--muted); font-size: 48px; font-weight: 700; line-height: 1.4; }
@@ -97,12 +98,12 @@ img { display: block; }
 .benefit-label--yellow { color: #f5b818; }
 
 .campaign-section { overflow: hidden; background: var(--yellow); }
-.campaign-layout { min-height: 744px; display: grid; grid-template-columns: 1fr 340px; align-items: center; gap: 30px; padding-block: 96px; }
+.campaign-layout { position: relative; min-height: 744px; display: grid; grid-template-columns: 1fr 340px; align-items: center; gap: 30px; padding-block: 96px; }
 .campaign-copy h2 { margin: 0 0 116px; font-size: 82px; font-weight: 800; letter-spacing: -.045em; line-height: 1.2; }
 .campaign-copy > p { margin: 14px 0; font-size: 41px; font-weight: 600; line-height: 1.48; }
 .campaign-copy strong { font-weight: inherit; }
 .campaign-copy small { display: none; }
-.campaign-art { width: 100%; height: auto; mix-blend-mode: multiply; }
+.campaign-art { position: absolute; top: 0; right: -160px; width: 480px; max-width: none; height: auto; mix-blend-mode: multiply; }
 
 .final-cta { min-height: 2180px; padding-block: 245px 210px; text-align: center; }
 .final-cta-inner { display: flex; flex-direction: column; align-items: center; }
@@ -122,7 +123,7 @@ img { display: block; }
   .header-actions { gap: 38px; transform: scale(.66); transform-origin: right center; }
   .hero-section { min-height: 920px; }
   .hero-inner { padding-block: 110px 90px; }
-  .hero-app-icon { width: 150px; margin-bottom: 72px; }
+  .hero-app-icon { width: 160px; margin-bottom: 72px; }
   .hero-inner h1 { font-size: clamp(70px, 11vw, 104px); }
   .hero-description { margin: 64px auto 74px; font-size: clamp(28px, 4.3vw, 42px); }
   .download-link { min-height: 104px; border-radius: 24px; font-size: 38px; }
@@ -142,6 +143,7 @@ img { display: block; }
   .campaign-layout { min-height: 590px; grid-template-columns: 1fr 240px; }
   .campaign-copy h2 { margin-bottom: 72px; font-size: 60px; }
   .campaign-copy > p { font-size: 29px; }
+  .campaign-art { top: 18px; right: -72px; width: 330px; }
   .final-cta { min-height: 1480px; padding-block: 160px; }
   .download-art { width: 540px; margin-bottom: 70px; }
   .final-cta h2 { font-size: 106px; }
@@ -152,14 +154,14 @@ img { display: block; }
 }
 
 @media (max-width: 599px) {
-  .site-shell { width: calc(100% - 32px); }
+  .site-shell { width: calc(100% - 30px); }
   .header-inner { min-height: 74px; }
   .brand-mark { width: 112px; height: 46px; }
   .brand-mark img { height: 112px !important; }
   .header-actions { gap: 30px; transform: scale(.38); }
   .hero-section { min-height: calc(100svh - 74px); }
   .hero-inner { padding-block: 72px 54px; }
-  .hero-app-icon { width: 96px; margin-bottom: 46px; }
+  .hero-app-icon { width: 102px; margin-bottom: 46px; }
   .hero-inner h1 { font-size: clamp(50px, 14.5vw, 72px); line-height: 1.02; }
   .hero-description { margin: 42px auto 48px; font-size: 20px; }
   .download-link { min-height: 60px; border-radius: 15px; font-size: 20px; }
@@ -181,12 +183,12 @@ img { display: block; }
   .campaign-layout { min-height: 500px; grid-template-columns: 1fr; padding-block: 64px; }
   .campaign-copy h2 { margin-bottom: 38px; font-size: 42px; }
   .campaign-copy > p { font-size: 20px; }
-  .campaign-art { width: 230px; margin: 10px auto 0; }
+  .campaign-art { position: static; width: 230px; max-width: 100%; margin: 10px auto 0; }
   .final-cta { min-height: 980px; padding-block: 100px 180px; }
   .download-art { width: 300px; margin-bottom: 46px; }
   .final-cta h2 { font-size: 76px; }
   .final-cta > div > p { margin-top: 46px; font-size: 20px; }
-  .cta-panel { bottom: max(12px, env(safe-area-inset-bottom)); width: calc(100% - 24px); min-height: 78px; gap: 10px; padding: 10px 10px 10px 14px; border-radius: 16px; }
+  .cta-panel { bottom: max(12px, env(safe-area-inset-bottom)); width: calc(100% - 30px); min-height: 78px; gap: 10px; padding: 10px 10px 10px 14px; border-radius: 16px; }
   .cta-panel > span { flex: 1 1 auto; font-size: 13px; line-height: 1.35; }
   .cta-panel .download-link { min-height: 50px; padding-inline: 16px; border-radius: 12px; font-size: 16px; }
 }

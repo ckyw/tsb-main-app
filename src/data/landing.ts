@@ -3,8 +3,7 @@ export type ConceptItem = {
   title: string;
   tagline: string;
   description: string[];
-  image: string;
-  imageAlt: string;
+  animationLabel: string;
 };
 
 export type AppFeature = {
@@ -31,8 +30,7 @@ export const conceptContent = {
         "30ml 테이스팅부터 80ml 한 잔까지",
         "직원에게 묻지 않아도 내 취향을 직접 확인할 수 있어요.",
       ],
-      image: "/images/features/tap.webp",
-      imageAlt: "디스펜서에서 와인을 따르는 손그림",
+      animationLabel: "디스펜서에서 와인을 따르는 애니메이션",
     },
     {
       key: "shop",
@@ -42,8 +40,7 @@ export const conceptContent = {
         "시음 후 마음에 들면 소매가 그대로 구매할 수 있어요.",
         "재고를 확인하고 픽업까지 가능해요.",
       ],
-      image: "/images/features/shop.webp",
-      imageAlt: "와인 두 병을 쇼핑백에 담는 손그림",
+      animationLabel: "와인 두 병을 쇼핑백에 담는 애니메이션",
     },
     {
       key: "bar",
@@ -53,8 +50,7 @@ export const conceptContent = {
         "와인 한 잔에 미식을 더해 더욱 풍성한 시간을 즐겨보세요.",
         "혼술이든 데이트든 회식이든 각자의 방식대로 머물 수 있어요.",
       ],
-      image: "/images/features/bar.webp",
-      imageAlt: "와인과 음식을 함께 즐기는 테이블 손그림",
+      animationLabel: "와인과 음식을 함께 즐기는 테이블 애니메이션",
     },
   ] satisfies ConceptItem[],
 };

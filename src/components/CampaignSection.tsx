@@ -15,7 +15,7 @@ export function CampaignSection() {
           alt="앱 출시 30% 할인 이벤트 손그림"
           width={560}
           height={494}
-          sizes="(max-width: 767px) 70vw, 38vw"
+          sizes="(max-width: 599px) 230px, (max-width: 980px) 330px, 480px"
           className="campaign-art"
         />
       </div>
