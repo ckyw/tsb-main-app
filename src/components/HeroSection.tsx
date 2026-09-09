@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AppDownloadLink } from "@/components/AppDownloadLink";
+import { TypewriterTitle } from "@/components/TypewriterTitle";
 import { heroContent } from "@/data/landing";
 
 export function HeroSection() {
@@ -14,7 +15,7 @@ export function HeroSection() {
           className="hero-app-icon"
           priority
         />
-        <h1>{heroContent.title}</h1>
+        <TypewriterTitle text={heroContent.title} />
         <p className="hero-description">{heroContent.description}</p>
         <AppDownloadLink analyticsId="hero_app_download_click" label={heroContent.ctaLabel} />
       </div>
