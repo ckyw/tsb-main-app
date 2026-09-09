@@ -16,6 +16,24 @@ export function CTASection() {
         />
         <h2>{finalCtaContent.title}</h2>
         <p>{finalCtaContent.description}</p>
+        <div className="store-badges" aria-label="앱 다운로드 스토어">
+          <Image
+            src="/images/stores/google-play.png"
+            alt="Google Play에서 다운로드"
+            width={530}
+            height={163}
+            sizes="(max-width: 599px) 112px, (max-width: 980px) 170px, 240px"
+            className="store-badge"
+          />
+          <Image
+            src="/images/stores/app-store.png"
+            alt="App Store에서 다운로드"
+            width={530}
+            height={163}
+            sizes="(max-width: 599px) 112px, (max-width: 980px) 170px, 240px"
+            className="store-badge"
+          />
+        </div>
         <div className="cta-panel">
           <span>{finalCtaContent.panelText}</span>
           <AppDownloadLink analyticsId="bottom_app_download_click" label={finalCtaContent.ctaLabel} />
